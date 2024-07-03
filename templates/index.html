@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Tracking and Detection</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Vehicle Tracking and Detection</h1>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Upload">
+    </form>
+
+    {% if car_count > 0 %}
+
+    {% endif %}
+
+    <h2>Uploaded Videos</h2>
+    <table>
+        <tr>
+            <th>Filename</th>
+            <th>Action</th>
+        </tr>
+        {% for file in files %}
+        <tr>
+            <td><a href="{{ url_for('static', filename='uploads/' ~ file) }}">{{ file }}</a></td>
+            <td>
+                <form action="{{ url_for('delete_file', filename=file) }}" method="post" style="display:inline;">
+                    <button type="submit">Delete</button>
+                </form>                
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <div class="other-options">
+        <a href="#">Ask to use Companion mode</a>
+    </div>
+</body>
+</html>

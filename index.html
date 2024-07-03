@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Meet Clone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header img {
+            height: 40px;
+        }
+        .main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #fff;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .video-container {
+            width: 80%;
+            max-width: 800px;
+            height: 450px;
+            background-color: #000;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .video-container p {
+            color: #fff;
+            font-size: 24px;
+        }
+        .controls {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .controls button {
+            background-color: #1a73e8;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        .controls button:hover {
+            background-color: #ff0404;
+        }
+        .other-options {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .other-options a {
+            color: #1a73e8;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .other-options a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="https://www.gstatic.com/images/branding/product/1x/meet_2020q4_48dp.png" alt="Google Meet Logo">
+        <div class="user-info">
+            <span>web phising@gmail.com</span>
+        </div>
+    </div>
+    <div class="main">
+        <div class="video-container">
+            <p>Camera is off</p>
+        </div>
+        <div class="controls">
+            <button>Upload</button>
+            <button>Tracking</button>
+        </div>
+        <div class="other-options">
+            <a href="#">Ask to use Companion mode</a>
+        </div>
+    </div>
+</body>
+</html>
